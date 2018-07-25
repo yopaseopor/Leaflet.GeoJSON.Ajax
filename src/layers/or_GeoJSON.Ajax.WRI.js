@@ -29,14 +29,14 @@ L.GeoJSON.Ajax.WRIpoi = L.GeoJSON.Ajax.extend({
 // French mountain limits
 L.GeoJSON.Ajax.WRImassifs = L.GeoJSON.Ajax.extend({
 	options: {
-		urlGeoJSON: '//yopaseopor.github.io/leaflet-geojson-selector/examples/export.geojson',
+		urlGeoJSON: '//www.refuges.info/api/polygones',
 		argsGeoJSON: {
 			type_polygon: 1
 		},
 		bbox: true,
 		style: function(feature) {
 			return {
-				popup: feature.properties.name,
+				popup: feature.properties.nom,
 				popupValidity: 0,
 				url: feature.properties.lien,
 				color: feature.properties.couleur,
